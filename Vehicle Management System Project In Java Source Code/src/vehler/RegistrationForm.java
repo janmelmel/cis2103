@@ -40,7 +40,6 @@ public class RegistrationForm extends javax.swing.JFrame {
     private void initComponents() {
 
         kGradientPanel1 = new keeptoo.KGradientPanel();
-        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -70,17 +69,13 @@ public class RegistrationForm extends javax.swing.JFrame {
         checkMale = new javax.swing.JCheckBox();
         jLabel20 = new javax.swing.JLabel();
         dobCombo2 = new com.toedter.calendar.JDateChooser();
-        jLabel4 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         xpanel = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         ypanel = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        SignInButton = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
+        button1 = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -88,12 +83,6 @@ public class RegistrationForm extends javax.swing.JFrame {
         kGradientPanel1.setkEndColor(new java.awt.Color(0, 51, 153));
         kGradientPanel1.setkStartColor(new java.awt.Color(51, 153, 255));
         kGradientPanel1.setLayout(null);
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("while you're in your comfortable zone.");
-        kGradientPanel1.add(jLabel1);
-        jLabel1.setBounds(120, 530, 440, 48);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setForeground(new java.awt.Color(102, 102, 102));
@@ -325,27 +314,11 @@ public class RegistrationForm extends javax.swing.JFrame {
         kGradientPanel1.add(jPanel1);
         jPanel1.setBounds(800, 10, 400, 700);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 51));
-        jLabel4.setText("Vehicles at your footsteps");
-        kGradientPanel1.add(jLabel4);
-        jLabel4.setBounds(130, 180, 250, 40);
-
         jLabel11.setFont(new java.awt.Font("Century Gothic", 0, 48)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Vehicle Management System");
+        jLabel11.setText("VMMS");
         kGradientPanel1.add(jLabel11);
-        jLabel11.setBounds(60, 90, 780, 120);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\jude\\Desktop\\itsc\\PNG\\IT SOURCECODE LOGO-01.png")); // NOI18N
-        kGradientPanel1.add(jLabel2);
-        jLabel2.setBounds(290, 220, 360, 300);
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("A system designed to help you");
-        kGradientPanel1.add(jLabel7);
-        jLabel7.setBounds(120, 510, 440, 48);
+        jLabel11.setBounds(20, 10, 780, 120);
 
         jPanel2.setOpaque(false);
 
@@ -431,34 +404,17 @@ public class RegistrationForm extends javax.swing.JFrame {
         );
 
         kGradientPanel1.add(jPanel2);
-        jPanel2.setBounds(1220, 10, 120, 30);
+        jPanel2.setBounds(1220, 10, 104, 30);
 
-        SignInButton.setBackground(new java.awt.Color(0, 0, 0));
-        SignInButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                SignInButtonMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                SignInButtonMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                SignInButtonMouseExited(evt);
+        button1.setActionCommand("back");
+        button1.setLabel("button1");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
             }
         });
-        SignInButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel21.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel21.setText("SignIn");
-        jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel21MouseClicked(evt);
-            }
-        });
-        SignInButton.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
-
-        kGradientPanel1.add(SignInButton);
-        SignInButton.setBounds(140, 650, 140, 40);
+        kGradientPanel1.add(button1);
+        button1.setBounds(430, 290, 54, 24);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -585,26 +541,10 @@ else
        // registerButton.setBackground(new Color(153,51,255));
     }//GEN-LAST:event_registerButtonMouseExited
 
-    private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel21MouseClicked
-
-    private void SignInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignInButtonMouseClicked
-        // TODO add your handling code here:
-        this.setVisible(false);
-        LoginMain reg=new LoginMain();
-        reg.setVisible(true);
-    }//GEN-LAST:event_SignInButtonMouseClicked
-
-    private void SignInButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignInButtonMouseEntered
-        // TODO add your handling code here:
-       // SignInButton.setBackground(new Color(204,153,255));
-    }//GEN-LAST:event_SignInButtonMouseEntered
-
-    private void SignInButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignInButtonMouseExited
-        // TODO add your handling code here:
-        //SignInButton.setBackground(new Color(153,51,255));
-    }//GEN-LAST:event_SignInButtonMouseExited
+        return;
+    }//GEN-LAST:event_button1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -642,13 +582,12 @@ else
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel SignInButton;
+    private java.awt.Button button1;
     private javax.swing.JCheckBox checkFemale;
     private javax.swing.JCheckBox checkMale;
     private javax.swing.JTextField cnicText;
     private javax.swing.JTextField contactnoText;
     private com.toedter.calendar.JDateChooser dobCombo2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -657,17 +596,13 @@ else
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;

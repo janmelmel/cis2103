@@ -30,8 +30,8 @@ public class LoginMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
         kGradientPanel1 = new keeptoo.KGradientPanel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         LoginAsCombo = new javax.swing.JComboBox();
@@ -45,15 +45,11 @@ public class LoginMain extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         forgotButton = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
         jLabel16 = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
         SignUpButton = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jSeparator8 = new javax.swing.JSeparator();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         xpanel = new javax.swing.JPanel();
@@ -61,69 +57,78 @@ public class LoginMain extends javax.swing.JFrame {
         ypanel = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
 
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        kGradientPanel1.setkEndColor(new java.awt.Color(0, 51, 153));
+        kGradientPanel1.setBackground(new java.awt.Color(0, 255, 102));
+        kGradientPanel1.setkEndColor(new java.awt.Color(0, 0, 0));
         kGradientPanel1.setkStartColor(new java.awt.Color(51, 153, 255));
         kGradientPanel1.setLayout(null);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 51));
-        jLabel4.setText("Vehicles at your footsteps");
-        kGradientPanel1.add(jLabel4);
-        jLabel4.setBounds(130, 180, 250, 40);
-
         jLabel11.setFont(new java.awt.Font("Century Gothic", 0, 64)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Vehicle Management System");
+        jLabel11.setText("Vehicle Maintenance \nManagement System");
         kGradientPanel1.add(jLabel11);
-        jLabel11.setBounds(120, 90, 930, 120);
+        jLabel11.setBounds(30, 50, 1227, 80);
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 204, 204));
         jLabel3.setText("LOGIN AS:");
         kGradientPanel1.add(jLabel3);
-        jLabel3.setBounds(910, 220, 69, 19);
+        jLabel3.setBounds(550, 180, 110, 19);
 
         LoginAsCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Admin", "Driver", "Passenger", " " }));
-        LoginAsCombo.setOpaque(false);
+        LoginAsCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginAsComboActionPerformed(evt);
+            }
+        });
         kGradientPanel1.add(LoginAsCombo);
-        LoginAsCombo.setBounds(910, 260, 110, 20);
+        LoginAsCombo.setBounds(550, 210, 110, 22);
 
         jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
         kGradientPanel1.add(jSeparator4);
-        jSeparator4.setBounds(910, 370, 270, 10);
+        jSeparator4.setBounds(550, 320, 270, 10);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 204, 204));
         jLabel6.setText("PASSWORD");
         kGradientPanel1.add(jLabel6);
-        jLabel6.setBounds(910, 390, 75, 19);
+        jLabel6.setBounds(550, 340, 110, 19);
 
-        TextPass.setBackground(new java.awt.Color(0, 51, 153));
         TextPass.setForeground(new java.awt.Color(255, 255, 255));
         TextPass.setBorder(null);
-        TextPass.setOpaque(false);
+        TextPass.setSelectionColor(new java.awt.Color(255, 255, 255));
         TextPass.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 TextPassFocusGained(evt);
             }
         });
         kGradientPanel1.add(TextPass);
-        TextPass.setBounds(910, 410, 270, 30);
+        TextPass.setBounds(550, 360, 270, 30);
 
         jLabel13.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(204, 204, 204));
         jLabel13.setText("USERNAME");
         kGradientPanel1.add(jLabel13);
-        jLabel13.setBounds(910, 310, 90, 19);
+        jLabel13.setBounds(550, 260, 90, 19);
 
-        TextId.setBackground(new java.awt.Color(0, 51, 153));
         TextId.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         TextId.setForeground(new java.awt.Color(255, 255, 255));
         TextId.setBorder(null);
         TextId.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        TextId.setSelectionColor(new java.awt.Color(255, 255, 255));
         TextId.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 TextIdFocusGained(evt);
@@ -135,11 +140,11 @@ public class LoginMain extends javax.swing.JFrame {
             }
         });
         kGradientPanel1.add(TextId);
-        TextId.setBounds(910, 340, 270, 30);
+        TextId.setBounds(550, 290, 270, 30);
 
         jSeparator6.setForeground(new java.awt.Color(255, 255, 255));
         kGradientPanel1.add(jSeparator6);
-        jSeparator6.setBounds(910, 450, 270, 10);
+        jSeparator6.setBounds(550, 400, 270, 10);
 
         LoginButton.setBackground(new java.awt.Color(0, 0, 0));
         LoginButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -171,7 +176,7 @@ public class LoginMain extends javax.swing.JFrame {
         LoginButton.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         kGradientPanel1.add(LoginButton);
-        LoginButton.setBounds(920, 510, 150, 40);
+        LoginButton.setBounds(600, 440, 150, 40);
 
         forgotButton.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         forgotButton.setForeground(new java.awt.Color(204, 204, 204));
@@ -182,21 +187,17 @@ public class LoginMain extends javax.swing.JFrame {
             }
         });
         kGradientPanel1.add(forgotButton);
-        forgotButton.setBounds(1140, 520, 104, 16);
-
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
-        kGradientPanel1.add(jSeparator2);
-        jSeparator2.setBounds(1140, 540, 110, 10);
+        forgotButton.setBounds(550, 410, 101, 16);
 
         jLabel16.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(204, 204, 204));
         jLabel16.setText("Don't have an account?");
         kGradientPanel1.add(jLabel16);
-        jLabel16.setBounds(150, 550, 230, 16);
+        jLabel16.setBounds(600, 480, 130, 16);
 
         jSeparator7.setForeground(new java.awt.Color(255, 255, 255));
         kGradientPanel1.add(jSeparator7);
-        jSeparator7.setBounds(150, 570, 150, 10);
+        jSeparator7.setBounds(600, 500, 150, 10);
 
         SignUpButton.setBackground(new java.awt.Color(0, 0, 0));
         SignUpButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -223,28 +224,15 @@ public class LoginMain extends javax.swing.JFrame {
         SignUpButton.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         kGradientPanel1.add(SignUpButton);
-        SignUpButton.setBounds(150, 590, 140, 40);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\jude\\Desktop\\itsc\\PNG\\IT SOURCECODE LOGO-01.png")); // NOI18N
-        kGradientPanel1.add(jLabel1);
-        jLabel1.setBounds(260, 210, 360, 320);
+        SignUpButton.setBounds(600, 510, 140, 40);
 
         jSeparator8.setForeground(new java.awt.Color(255, 255, 255));
         kGradientPanel1.add(jSeparator8);
-        jSeparator8.setBounds(910, 290, 270, 10);
-
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        kGradientPanel1.add(jSeparator1);
-        jSeparator1.setBounds(760, 230, 50, 320);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_Copyright_24px.png"))); // NOI18N
-        kGradientPanel1.add(jLabel2);
-        jLabel2.setBounds(1050, 650, 34, 30);
+        jSeparator8.setBounds(550, 240, 270, 10);
 
         jLabel5.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel5.setText("All rights reserved, ITSOURCECODE.");
         kGradientPanel1.add(jLabel5);
-        jLabel5.setBounds(1090, 660, 200, 14);
+        jLabel5.setBounds(1090, 660, 200, 0);
 
         jPanel1.setOpaque(false);
 
@@ -330,7 +318,7 @@ public class LoginMain extends javax.swing.JFrame {
         );
 
         kGradientPanel1.add(jPanel1);
-        jPanel1.setBounds(1180, 10, 83, 30);
+        jPanel1.setBounds(1180, 10, 67, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -340,10 +328,12 @@ public class LoginMain extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kGradientPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(kGradientPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        setSize(new java.awt.Dimension(1307, 686));
+        setSize(new java.awt.Dimension(1307, 612));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -520,7 +510,7 @@ public class LoginMain extends javax.swing.JFrame {
 
     private void ypanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ypanelMouseExited
         // TODO add your handling code here:
-        //ypanel.setBackground(new Color(0,51,153));
+        ypanel.setBackground(new Color(0,51,153));
     }//GEN-LAST:event_ypanelMouseExited
 
     private void ypanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ypanelMouseClicked
@@ -532,6 +522,10 @@ public class LoginMain extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_xpanelMouseClicked
+
+    private void LoginAsComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginAsComboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoginAsComboActionPerformed
 
     /**
      * @param args the command line arguments
@@ -575,23 +569,19 @@ public class LoginMain extends javax.swing.JFrame {
     private javax.swing.JTextField TextId;
     private javax.swing.JPasswordField TextPass;
     private javax.swing.JLabel forgotButton;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
