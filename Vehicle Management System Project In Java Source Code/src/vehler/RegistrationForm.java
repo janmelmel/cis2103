@@ -413,6 +413,11 @@ public class RegistrationForm extends javax.swing.JFrame {
                 button1ActionPerformed(evt);
             }
         });
+        button1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                button1KeyPressed(evt);
+            }
+        });
         kGradientPanel1.add(button1);
         button1.setBounds(430, 290, 54, 24);
 
@@ -545,6 +550,10 @@ else
         // TODO add your handling code here:
         return;
     }//GEN-LAST:event_button1ActionPerformed
+
+    private void button1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button1KeyPressed
 
     /**
      * @param args the command line arguments

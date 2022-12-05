@@ -88,7 +88,7 @@ public class LoginMain extends javax.swing.JFrame {
         kGradientPanel1.add(jLabel3);
         jLabel3.setBounds(550, 180, 110, 19);
 
-        LoginAsCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Admin", "Driver", "Passenger", " " }));
+        LoginAsCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Admin", "Driver", "Passenger", "" }));
         LoginAsCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginAsComboActionPerformed(evt);
