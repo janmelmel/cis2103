@@ -6,6 +6,7 @@ package app;
 
 import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
+import java.sql.Connection;
 import java.sql.*;
 
 /**
@@ -32,8 +33,8 @@ public class login_form extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        username = new javax.swing.JTextField();
-        password = new javax.swing.JTextField();
+        un = new javax.swing.JTextField();
+        pw = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         loginButton = new javax.swing.JButton();
         signinButton = new javax.swing.JButton();
@@ -45,17 +46,17 @@ public class login_form extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(24, 24, 24));
 
-        username.setText("Username");
-        username.addActionListener(new java.awt.event.ActionListener() {
+        un.setText("Username");
+        un.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usernameActionPerformed(evt);
+                unActionPerformed(evt);
             }
         });
 
-        password.setText("Password");
-        password.addActionListener(new java.awt.event.ActionListener() {
+        pw.setText("Password");
+        pw.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordActionPerformed(evt);
+                pwActionPerformed(evt);
             }
         });
 
@@ -93,17 +94,17 @@ public class login_form extends javax.swing.JFrame {
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(pw, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(un, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(44, 44, 44))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(76, 76, 76)
-                .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(un, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
-                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pw, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -153,35 +154,43 @@ public class login_form extends javax.swing.JFrame {
     }//GEN-LAST:event_signinButtonActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        var un = username.getText();
-        var pw = password.getText();
+        var usern = un.getText();
+        var pass = pw.getText();
+        String url = "jdbc:mysql://localhost:3306/vmms";
+        String username= "root";
+        String password = "";
         
-        if (un.isEmpty()||pw.isEmpty()) {
-            System.out.println("Fill all");
-        }
+        if (usern.isEmpty()||pass.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Fill all ");
+        }else{
+            try{
+                Class.forName("com.mysql.cj.jdbc.Driver");
         
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con;
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vmms","root","");
-            Statement stmt = con.createStatement();
-            ResultSet rs  = stmt.executeQuery("SELECT * from users where username='"+un+"' and password='"+pw+"'");
-            if(rs.next()){
-                JOptionPane.showMessageDialog(null, "Welcome "+un );
+                Connection db = DriverManager.getConnection(url, username, password);
+                Statement statement = db.createStatement();
+                
+                var result = statement.executeQuery("Select username, password from users");
+                while(result.next()){
+                    System.out.println(result.getString(1));
+                    System.out.println(result.getString(2));
+                    JOptionPane.showMessageDialog(null, "Welcome "+un );
+                }
+            }catch(HeadlessException | ClassNotFoundException | SQLException e){
+                System.out.println(e);
             }
-        }catch(HeadlessException | ClassNotFoundException | SQLException e){
-            System.out.println(e+"asdfasdfasd");
+            
+        
         }
         
     }//GEN-LAST:event_loginButtonActionPerformed
 
-    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
+    private void pwActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_passwordActionPerformed
+    }//GEN-LAST:event_pwActionPerformed
 
-    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
+    private void unActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_usernameActionPerformed
+    }//GEN-LAST:event_unActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,8 +233,8 @@ public class login_form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton loginButton;
-    private javax.swing.JTextField password;
+    private javax.swing.JTextField pw;
     private javax.swing.JButton signinButton;
-    private javax.swing.JTextField username;
+    private javax.swing.JTextField un;
     // End of variables declaration//GEN-END:variables
 }

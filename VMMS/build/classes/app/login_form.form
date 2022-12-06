@@ -90,8 +90,8 @@
                                   <Component id="jLabel1" min="-2" pref="37" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="jSeparator1" alignment="1" min="-2" pref="320" max="-2" attributes="0"/>
-                                      <Component id="password" min="-2" pref="320" max="-2" attributes="0"/>
-                                      <Component id="username" min="-2" pref="320" max="-2" attributes="0"/>
+                                      <Component id="pw" min="-2" pref="320" max="-2" attributes="0"/>
+                                      <Component id="un" min="-2" pref="320" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
@@ -104,9 +104,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                      <Component id="username" min="-2" pref="44" max="-2" attributes="0"/>
+                      <Component id="un" min="-2" pref="44" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="password" min="-2" pref="44" max="-2" attributes="0"/>
+                      <Component id="pw" min="-2" pref="44" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -121,20 +121,20 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="username">
+            <Component class="javax.swing.JTextField" name="un">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Username"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernameActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="unActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="password">
+            <Component class="javax.swing.JTextField" name="pw">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Password"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pwActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator1">
